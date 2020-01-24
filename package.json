@@ -1,7 +1,7 @@
 {
-  "name": "yearpicker",
+  "name": "react-picker",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "html-react-parser": "^0.9.1",
     "react": "^16.8.6",
@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "publish": "rm -rf dist && NODE_ENV=production babel src/yearPicker --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -29,5 +30,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "dist/yearPicker.js",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-stage-0": "^7.8.3",
+    "@babel/preset-stage-2": "^7.8.3",
+    "babel-cli": "^6.26.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhantjaiswal9098/react-picker.git"
+  },
+  "keywords": [
+    "react-picker",
+    "year picker"
+  ],
+  "author": "Siddhant Jaiswal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddhantjaiswal9098/react-picker/issues"
+  },
+  "homepage": "https://github.com/siddhantjaiswal9098/react-picker#readme"
 }
