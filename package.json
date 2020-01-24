@@ -1,6 +1,6 @@
 {
   "name": "react-picker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "dependencies": {
     "html-react-parser": "^0.9.1",
