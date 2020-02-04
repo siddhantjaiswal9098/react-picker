@@ -111,24 +111,24 @@ class YearPicker extends React.Component {
     }
     render() {
         const { showPicker, selectedArray } = this.state;
-        const { leftIcon, rightIcon, icon, activeIcon } = this.props;
+        const { leftIcon, rightIcon, icon, activeIcon, yearArray = [] } = this.props;
         return (
             <div>
                 <img style={{ height: '30px', width: '30px' }} onClick={this.handlePicker} src={
                     showPicker ?
-                        icon ? icon : CalendarIcon : activeIcon ? activeIcon : ActiveCalendarIcon} />
+                        icon ? icon : CalendarIcon : activeIcon ? activeIcon : ActiveCalendarIcon} alt="calender-icon" />
                 {showPicker &&
                     <div className="Header">
                         <div className="StyledHeader">
                             <div className="StyledContainer">
                                 <span className={`clickable ${(this.state.selectedIndexArray - 12 >= 0) ? '': 'disabled'}`} onClick={this.decrementValue}>
-                                    {leftIcon ? <img onClick={this.handlePicker} src={leftIcon} /> : '<'}
+                                    {leftIcon ? <img onClick={this.handlePicker} src={leftIcon} alt="left-icon" /> : '<'}
                                 </span>
                                 <span>
                                     {selectedArray[0]}-{selectedArray[selectedArray.length - 1]}
                                 </span>
-                                <span className={`clickable ${(this.state.selectedIndexArray + 12 <= this.props.yearArray.length - 1) ? '': 'disabled'}`} onClick={this.incrementValue}>
-                                    {rightIcon ? <img onClick={this.handlePicker} src={rightIcon} /> : '>'}
+                                <span className={`clickable ${(this.state.selectedIndexArray + 12 <= yearArray.length - 1) ? '': 'disabled'}`} onClick={this.incrementValue}>
+                                    {rightIcon ? <img onClick={this.handlePicker} src={rightIcon} alt="right-icon" /> : '>'}
                                 </span>
                             </div>
                             <div className="StyledCalendarBody">
